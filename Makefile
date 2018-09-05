@@ -9,7 +9,8 @@ env:
 	python3 -m venv .env && \
 	. .env/bin/activate && \
 	pip install --upgrade pip && \
-	make deps
+	make deps && \
+	pre-commit install
 
 
 deps:
