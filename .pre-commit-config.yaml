@@ -3,10 +3,16 @@ repos:
     rev: v1.4.0
     hooks:
     -   id: trailing-whitespace
+    -   id: check-ast
+    -   id: check-executables-have-shebangs
     -   id: end-of-file-fixer
     -   id: autopep8-wrapper
     -   id: check-docstring-first
     -   id: check-json
+    -   id: pretty-format-json
+    -   id: detect-aws-credentials
+    -   id: detect-private-key
+    -   id: double-quote-string-fixer
     -   id: check-yaml
     -   id: debug-statements
     -   id: name-tests-test
@@ -25,6 +31,10 @@ repos:
     rev: v0.6.4
     hooks:
     -   id: add-trailing-comma
+-   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    sha: v1.1.0
+    hooks:
+    -   id: python-safety-dependencies-check
 -   repo: meta
     hooks:
             # -   id: check-hooks-apply
