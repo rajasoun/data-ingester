@@ -2,6 +2,9 @@
 
 Data Ingestion Tool from External sources like Google Analytics,  Database or Log Files
 
+# [Google Analytics Setup](https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py)
+Refer steps required to access the Analytics Reporting API v4.
+
 # [pre-commit](https://pre-commit.com/) hook
 
 ```
