@@ -78,8 +78,8 @@ def get_report(analytics):
                         },
                     ],
                     metrics=[
-                        {'expression': 'ga:users'},
-                        {'expression': 'ga:newUsers'},
+                        {'expression': 'ga:users'},  # ,
+                        # {'expression': 'ga:newUsers'},
                     ], dimensions=[
                         {'name': 'ga:date'},
                     ], orderBys=[
@@ -132,14 +132,14 @@ def save_report_data(results):
 # https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/installed-py
 # https://ga-dev-tools.appspot.com/query-explorer/
 def main():
-    logger.info("Initiate Connection To Google Analytics")
+    logger.info('Initiate Connection To Google Analytics')
     analytics = initialize_analyticsreporting()
-    logger.info("Execute batch Query")
+    logger.info('Execute batch Query')
     response = get_report(analytics)
-    logging.debug("Report response: {0}".format(response))
-    logger.info("Save Data To CSV")
+    logging.debug('Report response: {0}'.format(response))
+    logger.info('Save Data To CSV')
     save_report_data(response)
-    logger.info("Google Analytics Data Successfully Downloaded")
+    logger.info('Google Analytics Data Successfully Downloaded')
 
 
 if __name__ == '__main__':
