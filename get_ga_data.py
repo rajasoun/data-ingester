@@ -32,7 +32,7 @@ SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 KEY_FILE_LOCATION = 'credentials/google_analytics.json'
 PROJECT_VIEW_ID = '63448190'
 
-FEED_DATA_FILE: str = 'data/output/access_history_ga.csv'
+FEED_DATA_FILE: str = 'data/output/est_daily_access.csv'
 
 start_date: str = '2012-08-28'  # '7daysAgo'
 max_results = '3000'
