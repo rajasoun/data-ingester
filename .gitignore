@@ -266,3 +266,6 @@ tmtags
 
 
 # End of https://www.gitignore.io/api/python,textmate,pycharm+all,sublimetext,jupyternotebook,visualstudiocode
+
+.DS_Store
+data/.DS_Store
