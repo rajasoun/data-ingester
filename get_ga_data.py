@@ -33,10 +33,10 @@ SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 
 
 def est_ga_credentials():
-    KEY_FILE_LOCATION = 'credentials/google_analytics.json'
+    KEY_FILE_LOCATION = 'credentials/goggle-analytics-est-ga.json'
     PROJECT_VIEW_ID = '63448190'
     start_date: str = '2012-08-28'  # '7daysAgo'
-    max_results = '3000'
+    max_results = (date.today() - date(2012,8,28)).days
     FEED_DATA_FILE: str = 'data/output/est_daily_access.csv'
     return KEY_FILE_LOCATION, PROJECT_VIEW_ID, \
         start_date, max_results, FEED_DATA_FILE
