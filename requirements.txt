@@ -25,9 +25,9 @@ pyasn1==0.4.4
 pyasn1-modules==0.2.2
 pyparsing==2.2.0
 pytz==2018.5
-PyYAML==5.2
+PyYAML==5.4
 requests==2.20.0
-rsa==3.4.2
+rsa==4.1
 safety==1.8.4
 six==1.11.0
 toml==0.9.4
