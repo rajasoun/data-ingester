@@ -1,34 +1,40 @@
+---
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v1.4.0
+    rev: v3.4.0
     hooks:
     -   id: trailing-whitespace
     -   id: check-ast
     -   id: check-executables-have-shebangs
     -   id: end-of-file-fixer
-    -   id: autopep8-wrapper
     -   id: check-docstring-first
     -   id: detect-private-key
     -   id: double-quote-string-fixer
     -   id: check-yaml
     -   id: debug-statements
     -   id: requirements-txt-fixer
+
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: '3.9.0'
+    hooks:
     -   id: flake8
 
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v1.1.0
+    rev: v2.4.0
     hooks:
     -   id: reorder-python-imports
         language_version: python3.9
 
 -   repo: https://github.com/asottile/add-trailing-comma
-    rev: v0.6.4
+    rev: v2.1.0
     hooks:
     -   id: add-trailing-comma
+
 -   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    sha: v1.1.0
+    rev: v1.2.1
     hooks:
     -   id: python-safety-dependencies-check
+
 -   repo: meta
     hooks:
     -   id: check-hooks-apply

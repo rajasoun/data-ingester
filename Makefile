@@ -2,25 +2,32 @@
 
 help:
 	@echo "  env            create a development environment using virtualenv"
+	@echo "  run            download the google analytics data"
 	@echo "  upgrade        upgrade dependencies to latest version"
+	@echo "  safety-check   to check dependencies for known security vulnerabilities"
 	@echo "  clean          remove unwanted stuff"
 
 env:
-	python3 -m venv .env && \
-	. .env/bin/activate && \
-	pip install --upgrade pip && \
+	pipenv shell \
 	make deps && \
+	pre-commit clean
 	pre-commit install
-
+	pre-commit install-hooks
 
 deps:
-	pip3 install -r requirements.txt
+	pipenv update
+
+run:
+	python3 get_ga_data.py
 
 upgrade:
-	pur -r requirements.txt
+	pipenv upgrade
+
+safety-check:
+	safety check
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} \; && \
   	rm -rf temp && \
   	rm -rf dist && \
-  	rm -fr .env
+  	pipenv --rm
