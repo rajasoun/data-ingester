@@ -13,5 +13,3 @@ Refer steps required to access the Analytics Reporting API v4.
 1. `make run` to download the google analytics data
 
 1. `make`     to get the help
-
-1. `make safety-check`  to check dependencies for known security vulnerabilities.

@@ -4,7 +4,6 @@ help:
 	@echo "  env            create a development environment using virtualenv"
 	@echo "  run            download the google analytics data"
 	@echo "  upgrade        upgrade dependencies to latest version"
-	@echo "  safety-check   to check dependencies for known security vulnerabilities"
 	@echo "  clean          remove unwanted stuff"
 
 env:
@@ -22,9 +21,6 @@ run:
 
 upgrade:
 	pipenv upgrade
-
-safety-check:
-	safety check
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} \; && \
