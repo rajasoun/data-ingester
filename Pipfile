@@ -10,7 +10,6 @@ google-api-python-client = "*"
 
 [dev-packages]
 pre-commit = "*"
-safety = "*"
 commitizen = "*"
 
 [requires]
