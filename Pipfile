@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+logzero = "*"
+oauth2client = "*"
+google-api-python-client = "*"
+
+[dev-packages]
+pre-commit = "*"
+
+[requires]
+python_version = "3.9"

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 import logging
 import os
@@ -6,7 +7,7 @@ from datetime import datetime
 from typing import List
 
 import logzero
-from apiclient.discovery import build
+from googleapiclient.discovery import build
 from logzero import logger
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -29,21 +30,27 @@ logzero.setup_default_logger(
 )
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
-KEY_FILE_LOCATION = 'credentials/google_analytics.json'
-PROJECT_VIEW_ID = '63448190'
 
-FEED_DATA_FILE: str = 'data/output/est_daily_access.csv'
 
-start_date: str = '2012-08-28'  # '7daysAgo'
-max_results = '3000'
+def est_ga_credentials():
+    KEY_FILE_LOCATION = 'credentials/google_analytics.json'
+    PROJECT_VIEW_ID = '63448190'
+    start_date: str = '2012-08-28'  # '7daysAgo'
+    max_results = '3000'
+    FEED_DATA_FILE: str = 'data/output/est_daily_access.csv'
+    return KEY_FILE_LOCATION, PROJECT_VIEW_ID, \
+        start_date, max_results, FEED_DATA_FILE
+
+
+KEY_FILE_LOCATION, PROJECT_VIEW_ID, \
+    start_date, max_results, FEED_DATA_FILE = est_ga_credentials()
 
 
 def initialize_analyticsreporting():
     """Initializes an Analytics Reporting API V4 service object.
-
-  Returns:
-    An authorized Analytics Reporting API V4 service object.
-  """
+      Returns:
+        An authorized Analytics Reporting API V4 service object.
+    """
 
     # Build the credentials object
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
