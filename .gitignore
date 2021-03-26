@@ -1,11 +1,3 @@
-x.env
-credentials/*.json
-log/*.log
-data/input/*.csv
-data/output/*.csv
-
-
-
 # Created by https://www.gitignore.io/api/python,textmate,pycharm+all,sublimetext,jupyternotebook,visualstudiocode
 
 ### JupyterNotebook ###
@@ -272,4 +264,9 @@ data/.DS_Store
 Pipfile.lock
 requirements.bak
 .vscode
+.env
+credentials/*.json
+log/*.log
+data/input/*.csv
+data/output/*.csv
 .cache_ggshield

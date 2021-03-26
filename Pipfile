@@ -11,6 +11,7 @@ google-api-python-client = "*"
 [dev-packages]
 pre-commit = "*"
 safety = "*"
+commitizen = "*"
 
 [requires]
 python_version = "3.9"
