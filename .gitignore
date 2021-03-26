@@ -272,3 +272,4 @@ data/.DS_Store
 Pipfile.lock
 requirements.bak
 .vscode
+.cache_ggshield
