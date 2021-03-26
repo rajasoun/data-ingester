@@ -269,3 +269,6 @@ tmtags
 
 .DS_Store
 data/.DS_Store
+Pipfile.lock
+requirements.bak
+.vscode
