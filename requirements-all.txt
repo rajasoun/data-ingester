@@ -1,6 +1,6 @@
 argcomplete==1.12.2
 cachetools==4.2.1
-certifi==2020.12.5
+certifi==2022.12.7
 chardet==4.0.0
 colorama==0.4.4
 commitizen==2.16.0
