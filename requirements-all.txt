@@ -25,7 +25,7 @@ pyparsing==2.4.7
 pytz==2021.1
 PyYAML==5.4.1
 questionary==1.9.0
-requests==2.25.1
+requests==2.31.0
 rsa==4.7.2
 six==1.15.0
 termcolor==1.1.0
